@@ -1,0 +1,53 @@
+2025-04-28 01:36:04 - Monitoring user activity on Windows Event Log.
+2025-04-28 01:38:05 - Monitoring user activity on Windows Event Log.
+2025-04-28 01:42:43 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:00:40 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:00:40 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:04:20 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:04:20 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:05:22 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:05:22 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:05:22 - Port 135 is open on 127.0.0.1
+2025-04-28 03:05:24 - Port 445 is open on 127.0.0.1
+2025-04-28 03:05:27 - Port 1032 is open on 127.0.0.1
+2025-04-28 03:05:27 - Port 1042 is open on 127.0.0.1
+2025-04-28 03:05:27 - Port 1043 is open on 127.0.0.1
+2025-04-28 03:05:32 - Port 2000 is open on 127.0.0.1
+2025-04-28 03:05:48 - Port 5040 is open on 127.0.0.1
+2025-04-28 03:05:52 - Port 5939 is open on 127.0.0.1
+2025-04-28 03:05:57 - Port 6850 is open on 127.0.0.1
+2025-04-28 03:08:39 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:08:39 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:08:39 - Port 135 is open on 127.0.0.1
+2025-04-28 03:08:41 - Port 445 is open on 127.0.0.1
+2025-04-28 03:08:41 - Port scan interrupted by user.
+2025-04-28 03:09:17 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:09:17 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:09:17 - Port 135 is open on 127.0.0.1
+2025-04-28 03:09:19 - Port 445 is open on 127.0.0.1
+2025-04-28 03:09:22 - Port scan completed.
+2025-04-28 03:09:59 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:09:59 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:09:59 - Port 135 is open on 127.0.0.1
+2025-04-28 03:10:01 - Port 445 is open on 127.0.0.1
+2025-04-28 03:10:01 - Port scan interrupted by user.
+2025-04-28 03:10:14 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:10:14 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:10:15 - Port 135 is open on 127.0.0.1
+2025-04-28 03:10:16 - Port 445 is open on 127.0.0.1
+2025-04-28 03:10:20 - Port scan completed.
+2025-04-28 03:11:03 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:11:04 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:11:04 - Port 135 is open on 127.0.0.1
+2025-04-28 03:11:06 - Port 445 is open on 127.0.0.1
+2025-04-28 03:11:09 - Port scan completed.
+2025-04-28 03:11:21 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:11:21 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:11:22 - Port 135 is open on 127.0.0.1
+2025-04-28 03:11:23 - Port 445 is open on 127.0.0.1
+2025-04-28 03:11:27 - Port scan completed.
+2025-04-28 03:11:36 - Starting port scan on host: 127.0.0.1
+2025-04-28 03:11:36 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:11:36 - Port 135 is open on 127.0.0.1
+2025-04-28 03:11:38 - Port 445 is open on 127.0.0.1
+2025-04-28 03:11:41 - Port scan completed.

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDS Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Host-Based Intrusion Detection System</h1>
+    </header>
+    <main>
+        <h2>Set Host IP</h2>
+        <div>
+            <input type="text" id="host-ip" placeholder="Enter Host IP address">
+            <button onclick="setHostIP()">Set Host IP</button>
+        </div>
+
+        <h2>Logs</h2>
+        <div id="log-container" class="log-container"></div>
+
+        <h2>Alerts</h2>
+        <div id="alert-container" class="log-container"></div>
+
+        <h2>Host IP Logs</h2>
+        <div id="host-log-container" class="log-container"></div>
+
+        <h2>Host IP Alerts</h2>
+        <div id="host-alert-container" class="log-container"></div>
+    </main>
+</body>
+</html>

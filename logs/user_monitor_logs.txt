@@ -1,0 +1,10 @@
+2025-04-28 02:30:45 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 02:30:47 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 02:31:23 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 02:31:25 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 02:43:54 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 02:43:56 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 02:45:06 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 02:45:08 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:13:12 - The 'wmi' module is required for Windows user monitoring.
+2025-04-28 03:13:14 - The 'wmi' module is required for Windows user monitoring.
