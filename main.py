@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 import threading
+import os
 from core.user_monitor import monitor_users
 from core.file_monitor import monitor_files
 from core.rule_engine import apply_rules
@@ -8,6 +9,15 @@ app = Flask(__name__)
 
 # Global variable to store the target IP
 target_ip = None
+
+# Define a logger
+import logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')
+file_handler = logging.FileHandler('logs/app_logs.txt')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 @app.route("/")
 def index():
@@ -36,6 +46,7 @@ def get_alerts():
             filtered_alerts = [alert for alert in alert_logs if "port" not in alert.lower()]
         return jsonify({"alerts": filtered_alerts})
     except FileNotFoundError:
+        logger.error("Alert file not found")
         return jsonify({"alerts": []})
 
 @app.route("/set_target_ip", methods=["POST"])
@@ -44,7 +55,9 @@ def set_target_ip():
     global target_ip
     target_ip = request.json.get("target_ip")
     if target_ip:
+        logger.info(f"Target IP set to {target_ip}")
         return jsonify({"message": f"Target IP set to {target_ip}"}), 200
+    logger.error("Invalid IP address")
     return jsonify({"error": "Invalid IP address"}), 400
 
 @app.route("/host_logs")
@@ -52,6 +65,7 @@ def get_host_logs():
     """Return logs filtered by the target IP."""
     global target_ip
     if not target_ip:
+        logger.error("Target IP not set")
         return jsonify({"logs": []})
     log_file = "logs/intrusion_logs.txt"
     try:
@@ -60,6 +74,7 @@ def get_host_logs():
             filtered_logs = [log for log in logs if target_ip in log]
         return jsonify({"logs": filtered_logs})
     except FileNotFoundError:
+        logger.error("Log file not found")
         return jsonify({"logs": []})
 
 @app.route("/host_alerts")
@@ -67,6 +82,7 @@ def get_host_alerts():
     """Return alerts filtered by the target IP."""
     global target_ip
     if not target_ip:
+        logger.error("Target IP not set")
         return jsonify({"alerts": []})
     alert_file = "logs/alerts.txt"
     try:
@@ -75,6 +91,7 @@ def get_host_alerts():
             filtered_alerts = [alert for alert in alert_logs if target_ip in alert and "port" not in alert.lower()]
         return jsonify({"alerts": filtered_alerts})
     except FileNotFoundError:
+        logger.error("Alert file not found")
         return jsonify({"alerts": []})
 
 def start_user_monitoring():
@@ -105,9 +122,10 @@ if __name__ == "__main__":
     print("       Created by Akash Patil      ")
     print("===================================")
 
-    # Ensure the logs directory exists
-    import os
+    # Ensure the logs directory and files exist
     os.makedirs("logs", exist_ok=True)
+    open("logs/intrusion_logs.txt", "a").close()
+    open("logs/alerts.txt", "a").close()
 
     # Start monitoring in separate threads
     threading.Thread(target=start_user_monitoring, daemon=True).start()
